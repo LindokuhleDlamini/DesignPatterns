@@ -42,11 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MediatorPattern\IAirTrafficControlInstructions.cs" />
+    <Compile Include="MediatorPattern\AirTrafficControlMediator.cs" />
+    <Compile Include="MediatorPattern\Flight.cs" />
+    <Compile Include="MediatorPattern\IAirTrafficControlMediator.cs" />
+    <Compile Include="MediatorPattern\Runway.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

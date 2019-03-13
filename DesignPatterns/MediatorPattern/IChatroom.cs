@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.MediatorPattern
 {
-    public interface IAirTrafficControlInstructions
+    public interface IChatroom
     {
-        void Land();
+        void RegisterParticipant(Participant participant);
+
+        void SendMessage(Participant participant, string message);
     }
 }

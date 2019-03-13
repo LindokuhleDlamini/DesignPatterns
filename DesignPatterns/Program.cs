@@ -17,14 +17,25 @@ namespace DesignPatterns
 
         public static void MediatorPatternClient()
         {
-            var aTCMediator = new AirTrafficControlMediator();
-            var flight93 = new Flight(aTCMediator);
-            var runway = new Runway(aTCMediator);
-            aTCMediator.SetFlight(flight93);
-            aTCMediator.SetRunway(runway);
-            flight93.FlightReadyToLand();
-            runway.Land();
-            flight93.Land();
+            var chatRoomOne = new Chatroom();
+            var participantOne = new Participant(chatRoomOne, "Lindo");
+            var participantTwo = new Participant(chatRoomOne, "John");
+            var participantThree = new Participant(chatRoomOne, "Jane");
+            var participantFour = new Participant(chatRoomOne, "Okuhle");
+
+            chatRoomOne.RegisterParticipant(participantOne);
+            chatRoomOne.RegisterParticipant(participantTwo);
+            chatRoomOne.RegisterParticipant(participantThree);
+
+            participantOne.SendMessage("what's up");
+
+            chatRoomOne.RemoveParticipant(participantThree);
+
+            participantTwo.SendMessage("Hey Dudes");
+
+            chatRoomOne.RegisterParticipant(participantFour);
+
+            participantFour.SendMessage("what Did I miss?");
         }
     }
 }

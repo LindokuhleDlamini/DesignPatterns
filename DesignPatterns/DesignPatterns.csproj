@@ -45,7 +45,6 @@
     <Compile Include="MediatorPattern\Chatroom.cs" />
     <Compile Include="MediatorPattern\IChatroom.cs" />
     <Compile Include="MediatorPattern\Participant.cs" />
-    <Compile Include="MyMediator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

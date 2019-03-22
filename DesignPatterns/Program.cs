@@ -1,9 +1,6 @@
-﻿using DesignPatterns.MediatorPattern;
+﻿using DesignPatterns.AdapterPattern;
+using DesignPatterns.MediatorPattern;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
@@ -11,7 +8,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            MediatorPatternClient();
+            AdapterPatternClient();
             Console.ReadLine();
         }
 
@@ -36,6 +33,14 @@ namespace DesignPatterns
             chatRoomOne.RegisterParticipant(participantFour);
 
             participantFour.SendMessage("what Did I miss?");
+        }
+
+        public static void AdapterPatternClient()
+        {
+            var audioPlayer = new AudioPlayer();
+            audioPlayer.Play("mp3", "Sicko Mode - La Flame");
+            audioPlayer.Play("mp4", "Rick and Morty");
+            audioPlayer.Play("VLC", "National Geo");
         }
     }
 }

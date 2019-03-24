@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.AdapterPattern;
 using DesignPatterns.MediatorPattern;
+using DesignPatterns.ObserverPattern;
 using System;
 
 namespace DesignPatterns
@@ -8,7 +9,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            AdapterPatternClient();
+            ObserverPatternClient();
             Console.ReadLine();
         }
 
@@ -41,6 +42,20 @@ namespace DesignPatterns
             audioPlayer.Play("mp3", "Sicko Mode - La Flame");
             audioPlayer.Play("mp4", "Rick and Morty");
             audioPlayer.Play("VLC", "National Geo");
+        }
+
+        public static void ObserverPatternClient()
+        {
+            ISubject subject = new Subject();
+
+            IObserver octal = new OctalObserver(subject);
+            IObserver hexa = new HexaObserver(subject);
+            IObserver binary = new BinaryObserver(subject);
+
+            Console.WriteLine("State chage, value: 15");
+            subject.SetState(15);
+            Console.WriteLine("State chage, value: 10");
+            subject.SetState(10);
         }
     }
 }

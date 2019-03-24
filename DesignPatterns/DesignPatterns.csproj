@@ -51,6 +51,12 @@
     <Compile Include="MediatorPattern\Chatroom.cs" />
     <Compile Include="MediatorPattern\IChatroom.cs" />
     <Compile Include="MediatorPattern\Participant.cs" />
+    <Compile Include="ObserverPattern\BinaryObserver.cs" />
+    <Compile Include="ObserverPattern\HexaObserver.cs" />
+    <Compile Include="ObserverPattern\IObserver.cs" />
+    <Compile Include="ObserverPattern\ISubject.cs" />
+    <Compile Include="ObserverPattern\OctalObserver.cs" />
+    <Compile Include="ObserverPattern\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

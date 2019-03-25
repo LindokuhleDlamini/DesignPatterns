@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.AdapterPattern;
+using DesignPatterns.CommandPattern;
 using DesignPatterns.MediatorPattern;
 using DesignPatterns.ObserverPattern;
 using System;
@@ -9,7 +10,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            ObserverPatternClient();
+            CommandPatternClient();
             Console.ReadLine();
         }
 
@@ -56,6 +57,25 @@ namespace DesignPatterns
             subject.SetState(15);
             Console.WriteLine("State chage, value: 10");
             subject.SetState(10);
+        }
+
+        public static void CommandPatternClient()
+        {
+            Stock nikeStock = new Stock("Nike inc", 50000);
+            Stock dellStock = new Stock("Dell", 10983);
+
+            IOrder nikeBuyOrder = new BuyStock(nikeStock);
+            IOrder dellSellOrder = new SellStock(dellStock);
+            IOrder dellBuyOrder = new BuyStock(dellStock);
+
+            Broker broker = new Broker();
+
+            broker.TakeOrder(nikeBuyOrder);
+            broker.TakeOrder(dellBuyOrder);
+            broker.PlaceOrders();
+
+            broker.TakeOrder(dellSellOrder);
+            broker.PlaceOrders();
         }
     }
 }

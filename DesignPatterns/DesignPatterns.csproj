@@ -48,6 +48,11 @@
     <Compile Include="AdapterPattern\MediaAdapter.cs" />
     <Compile Include="AdapterPattern\Mp4Player.cs" />
     <Compile Include="AdapterPattern\VlcPlayer.cs" />
+    <Compile Include="CommandPattern\Broker.cs" />
+    <Compile Include="CommandPattern\BuyStock.cs" />
+    <Compile Include="CommandPattern\IOrder.cs" />
+    <Compile Include="CommandPattern\SellStock.cs" />
+    <Compile Include="CommandPattern\Stock.cs" />
     <Compile Include="MediatorPattern\Chatroom.cs" />
     <Compile Include="MediatorPattern\IChatroom.cs" />
     <Compile Include="MediatorPattern\Participant.cs" />
